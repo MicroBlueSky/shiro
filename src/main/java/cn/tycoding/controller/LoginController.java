@@ -79,26 +79,26 @@ public class LoginController {
         return "login";
     }
 
-    /**
-     * 退出登录，我们不需要实现，Shiro的Filter过滤器会帮我们生成一个logout请求，
-     *    当浏览器访问`/logout`请求时，Shiro会自动清空缓存并重定向到配置好的loginUrl页面
-     *
-     * @return
-     */
-    @RequestMapping("/logout")
-    public String logout() {
-        Subject subject = SecurityUtils.getSubject();
-        subject.logout();
-        return "index";
-    }
-
-    /**
-     * 登录成功，跳转到首页
-     *
-     * @return
-     */
-    @RequestMapping("/index")
-    public String index() {
-        return "index";
-    }
+//    /**
+//     * 退出登录，我们不需要实现，Shiro的Filter过滤器会帮我们生成一个logout请求，
+//     *    当浏览器访问`/logout`请求时，Shiro会自动清空缓存并重定向到配置好的loginUrl页面
+//     *
+//     * @return
+//     */
+//    @RequestMapping("/logout")
+//    public String logout() {
+//        Subject subject = SecurityUtils.getSubject();
+//        subject.logout();
+//        return "index";
+//    }
+//
+//    /**
+//     * 登录成功，跳转到首页
+//     *
+//     * @return
+//     */
+//    @RequestMapping("/index")
+//    public String index() {
+//        return "index";
+//    }
 }
